@@ -1,77 +1,34 @@
-console.log("hello world ")
+// // TDZ: when we declare the variable with let and const without its propoer initialization then the variable lies in temporal dead zone untill its proper initialization.
 
 
-// using push pop 
+// // Q1.
 
-let fruits = [ "Banana" , "Mango" ]
-let removed = [ "apple" ]
+// Q1. Pass/Fail check
+let marks = [32, 11, 7, 24, 19, 35, 10, 0, 15, 17];
 
-console.log(removed)
-console.log(fruits)
-
-
-
-// reverse the array 
-
-let arr1 = [ 1 , 2 , 3 , 4 , 5 ]
-let rev = []
-
-while(arr1.length>0){
-    rev.push(arr1.pop())
-}
-
-console.log(rev)
-
-
-//  remove negative element 
-
-
-let arr2 = [ 1 , 2 , 3 , 4 , 5 , -2 , -4 , -9 ];
-
-let res = []
-
-while(arr2.length>0){
-    let val = arr2.shift();
-    if(val>0){
-        res.push(val);
-    }
-}
-console.log(res)
-
-
-// check palindrome 
-
-function palindrome() {
-
-  let arr3 = [1, 2, 3, 4, 5]
-  let original = []
-  let reverse = []
-
-  for (let i = 0; i < arr3.length; i++) {
-    original.push(arr3[i])
+let passedMarks = marks.filter((x) => {
+  if (x >= 16) {
+    console.log(x, "pass");
+    return true;   //   must return true to keep in filtered array
+  } else {
+    console.log(x, "fail");
+    return false;  //   must return false to exclude
   }
+});
 
-  while (arr3.length > 0) {
-    reverse.push(arr3.pop())
-  }
+console.log("Filtered (pass only):", passedMarks);
 
-  for (let i = 0; i < original.length; i++) {
-    if (original[i] !== reverse[i]) {
-      return "not a palindrome"
-    }
-  }
 
-  return "palindrome"
+// Q2. Find sum using for loop
+let arr1 = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let i = 0; i < arr1.length; i++) {
+  sum = sum + arr1[i];
 }
-
-console.log(palindrome())
-
-//  remove duplicate 
+console.log("Sum with for loop:", sum);
 
 
-
-// odd elements
-
-
-
-//  moves all zeros to end
+// Q2. Find sum using reduce
+let arr2 = [1, 2, 3, 4, 5];
+let total = arr2.reduce((acc, current) => acc + current, 0);
+console.log("Sum with reduce:", total);

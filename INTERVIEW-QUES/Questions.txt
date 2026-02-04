@@ -1,0 +1,40 @@
+INTERVIEW PREPARATION QUESTIONS :
+
+
+1. Difference between var,let and const.
+
+2. Explain different type of operators in javascript.
+
+3. Difference between == and === .
+
+4. What is hoisting and TDZ(Temporal Dead Zone).
+
+5. Explain different array methods I javascript:
+
+           # Map vs Filter vs reduce
+           # Map vs for each
+           # Find and filter
+           # Same vs every
+
+6. String and object method 
+
+
+7. Types of functions in js
+            # Regular Function
+            # Arrow Function 
+            # First Class function
+            # Higher Order Function
+            # Callback Function
+            # Self Envoking Function
+            # IIFE(Immediately Invoked Function Expression)
+            #  Anomalous function which does not have any name
+
+8. Difference b/t object.freez and object.seal .
+
+9. What is execution context and how js code execute in execution context.
+
+10. What is callstack .
+
+11. Difference bt DOM and HTML.
+
+12. 
