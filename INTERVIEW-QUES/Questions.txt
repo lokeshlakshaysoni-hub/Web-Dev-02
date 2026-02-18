@@ -35,6 +35,8 @@ INTERVIEW PREPARATION QUESTIONS :
 
 10. What is callstack .
 
-11. Difference bt DOM and HTML.
+11. Difference between DOM and HTML.
 
-12. 
+12. Diffrences InnerText and InnerHTML and textcontent 
+
+13 . 
