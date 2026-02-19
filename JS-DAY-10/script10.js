@@ -4,7 +4,7 @@ function login(email, pass, cb) {
     }, 3000);
 }
 
-function getVideoDetails(cb) {
+function getVideoDetails( video ,cb) {
     setTimeout(() => {
         cb({ title: "Video Title", description: "Video Description", duration: "5 mins" });
     }, 2000);
@@ -28,3 +28,4 @@ login("user@example.com", "password", (userDetails) => {
         })
     })
 });
+
