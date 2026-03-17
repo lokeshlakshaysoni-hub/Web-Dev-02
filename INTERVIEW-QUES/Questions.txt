@@ -1,42 +1,175 @@
-INTERVIEW PREPARATION QUESTIONS :
+______________________________________________________________________________________________________________________________________________
+
+1. Difference between var, let, and const
+
+Answer:
+- var: Function-scoped, allows redeclaration, hoisted with undefined.
+- let: Block-scoped, cannot be redeclared in the same scope, hoisted but in TDZ.
+- const: Block-scoped, must be initialized at declaration, cannot be reassigned.
+
+______________________________________________________________________________________________________________________________________________
+
+2. Types of Operators in JavaScript
+
+Answer:
+- Arithmetic (+, -, *, /, %)
+- Assignment (=, +=, -=, *=)
+- Comparison (==, ===, !=, !==, <, >)
+- Logical (&&, ||, !)
+- Bitwise (&, |, ^, ~, <<, >>)
+- Ternary (condition ? expr1 : expr2)
+- Type (typeof, instanceof)
+
+______________________________________________________________________________________________________________________________________________
+
+3. Difference between == and ===
+
+Answer:
+- ==: Loose equality, performs type coercion.
+- ===: Strict equality, checks both value and type.
+
+______________________________________________________________________________________________________________________________________________
+4. Hoisting and TDZ
+
+Answer:
+- Hoisting: JavaScript moves declarations to the top of scope. Variables declared with var are hoisted with undefined.
+- TDZ (Temporal Dead Zone): Period between entering scope and variable initialization where accessing let/const throws an error.
 
 
-1. Difference between var,let and const.
+______________________________________________________________________________________________________________________________________________
+5. Array Methods
 
-2. Explain different type of operators in javascript.
+Answer:
+- Map vs Filter vs Reduce
+- map: Transforms each element, returns new array.
+- filter: Returns elements that match condition.
+- reduce: Accumulates values into single result.
+- Map vs forEach
+- map: Returns new array.
+- forEach: Executes function but returns undefined.
+- Find vs Filter
+- find: Returns first matching element.
+- filter: Returns all matching elements.
+- Some vs Every
+- some: Returns true if at least one element matches.
+- every: Returns true if all elements match.
 
-3. Difference between == and === .
+______________________________________________________________________________________________________________________________________________
 
-4. What is hoisting and TDZ(Temporal Dead Zone).
+6. String and Object Methods
 
-5. Explain different array methods I javascript:
+Answer:
+- String: charAt(), slice(), substring(), toUpperCase(), toLowerCase(), split(), includes().
+- Object: Object.keys(), Object.values(), Object.entries(), Object.assign(), Object.freeze(), Object.seal().
 
-           # Map vs Filter vs reduce
-           # Map vs for each
-           # Find and filter
-           # Same vs every
+______________________________________________________________________________________________________________________________________________
 
-6. String and object method 
+7. Types of Functions in JS
 
 
-7. Types of functions in js
-            # Regular Function
-            # Arrow Function 
-            # First Class function
-            # Higher Order Function
-            # Callback Function
-            # Self Envoking Function
-            # IIFE(Immediately Invoked Function Expression)
-            #  Anomalous function which does not have any name
+Answer:
+- Regular Function
+- Arrow Function
+- First-Class Function (functions treated as values)
+- Higher-Order Function (takes/returns functions)
+- Callback Function
+- Self-Invoking Function
+- IIFE (Immediately Invoked Function Expression)
+- Anonymous Function (no name)
 
-8. Difference b/t object.freez and object.seal .
+______________________________________________________________________________________________________________________________________________
 
-9. What is execution context and how js code execute in execution context.
+8. Difference between Object.freeze() and Object.seal()
 
-10. What is callstack .
+Answer:
+- Object.freeze(): Prevents adding, removing, or modifying properties.
+- Object.seal(): Prevents adding/removing properties, but allows modification of existing ones.
 
-11. Difference between DOM and HTML.
+______________________________________________________________________________________________________________________________________________
 
-12. Diffrences InnerText and InnerHTML and textcontent 
+9. Execution Context
 
-13 . 
+Answer:
+- JS runs inside an Execution Context (Global, Function).
+- Each context has Memory (variable environment) and Code (thread of execution).
+- Created in two phases:
+- Creation Phase (hoisting, scope setup)
+- Execution Phase (code runs line by line)
+
+______________________________________________________________________________________________________________________________________________
+
+10. Call Stack
+
+Answer:
+- A stack structure that keeps track of function calls.
+- When a function is invoked, it’s pushed onto the stack; when finished, it’s popped off.
+- Helps manage execution order.
+
+______________________________________________________________________________________________________________________________________________
+
+11. Difference between DOM and HTML
+
+Answer:
+- HTML: Markup language, static structure of webpage.
+- DOM: Object representation of HTML, dynamic, can be manipulated via JS.
+
+______________________________________________________________________________________________________________________________________________
+
+12. Difference between innerText, innerHTML, and textContent
+
+Answer:
+- innerText: Returns visible text (respects CSS styles like display:none).
+- innerHTML: Returns HTML markup inside element.
+- textContent: Returns all text content, regardless of visibility.
+
+______________________________________________________________________________________________________________________________________________
+
+13. What are Closures in JavaScript?
+
+Answer:
+- A closure is a function that remembers variables from its outer scope even after the outer function has finished executing.
+- Example:
+
+--------------------------------------
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    return count;
+  };
+}
+
+const counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2
+
+______________________________________________________________________________________________________________________________________________
+
+14. Explain Event Loop in JavaScript
+
+Answer:
+- The event loop manages execution of synchronous and asynchronous code.
+- Steps:
+- Executes synchronous code in the call stack.
+- Handles asynchronous tasks (callbacks, promises, timers) from the callback queue or microtask queue.
+- Ensures non-blocking behavior.
+
+______________________________________________________________________________________________________________________________________________
+
+15. Difference between null and undefined
+
+Answer:
+- undefined: Variable declared but not assigned a value.
+- null: Explicitly assigned "no value".
+- Example:
+------------------------------------
+let a;
+console.log(a); // undefined
+let b = null;
+console.log(b); // null
+
+______________________________________________________________________________________________________________________________________________
+
+16. How to retrive data from a string formated object ?
+
+Answer:  
