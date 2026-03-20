@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0b0e14;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(20, 150, 187, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(15, 32, 39, 1) 0px, transparent 80%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #f8f9fa;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.parent-card {
+    display: flex;
+    gap: 25px;
+}
+
+h1 {
+    text-align: center;
+    color: #00d2ff; /* Electric Cyan */
+    margin-bottom: 30px;
+    font-weight: 800;
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95); /* Slight transparency */
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    width: 100%;
+    color: #2d3436;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Card Hover: Lifts and Glows */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 210, 255, 0.2);
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+}
+
+input {
+    flex: 1;
+    padding: 14px;
+    border-radius: 10px;
+    border: 2px solid #dfe6e9;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #00d2ff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 210, 255, 0.1);
+}
+
+/* Primary Button Action */
+button {
+    padding: 12px 28px;
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+}
+
+/* Button Hover: Pulsing Glow + Scale */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Weather Items - Color Coded */
+.weather-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-left: 6px solid #3a7bd5;
+    margin-bottom: 10px;
+    background: #f1f2f6;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.weather-item:hover {
+    background: #e1f5fe;
+    transform: translateX(10px); /* Slides right on hover */
+}
+
+/* Console: Matrix/Developer Style */
+.console {
+    background: #1e1e2e; /* Dark Dracula theme style */
+    color: #a6adc8;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    max-height: 280px;
+    overflow-y: auto;
+    border: 1px solid #313244;
+}
+
+/* Log Color Effectiveness */
+.log {
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.log.async { border-left: 4px solid #f38ba8; padding-left: 10px; color: #f38ba8; }    /* Pink/Red */
+.log.promise { border-left: 4px solid #fab387; padding-left: 10px; color: #fab387; }  /* Peach/Orange */
+.log.callback { border-left: 4px solid #94e2d5; padding-left: 10px; color: #94e2d5; } /* Teal/Green */
+
+/* History Tags */
+.history button {
+    margin: 5px;
+    padding: 8px 18px;
+    background: transparent;
+    color: #3a7bd5;
+    border: 2px solid #3a7bd5;
+    border-radius: 30px;
+}
+
+.history button:hover {
+    background: #3a7bd5;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width:700px) {
+    .parent-card {
+        flex-direction: column;
+    }
+}
